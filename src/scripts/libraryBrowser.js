@@ -57,8 +57,8 @@ export function getQueryPagingHtml (options) {
         html += '<div style="display:inline-block;">';
 
         if (showControls) {
-            html += '<button is="paper-icon-button-light" class="btnPreviousPage autoSize" ' + (startIndex ? '' : 'disabled') + '><span class="material-icons arrow_back" aria-hidden="true"></span></button>';
-            html += '<button is="paper-icon-button-light" class="btnNextPage autoSize" ' + (startIndex + limit >= totalRecordCount ? 'disabled' : '') + '><span class="material-icons arrow_forward" aria-hidden="true"></span></button>';
+            html += '<button is="paper-icon-button-light" title="' + globalize.translate('ButtonPreviousPage') + '" class="btnPreviousPage autoSize" ' + (startIndex ? '' : 'disabled') + '><span class="material-icons arrow_back" aria-hidden="true"></span></button>';
+            html += '<button is="paper-icon-button-light" title="' + globalize.translate('ButtonNextPage') + '" class="btnNextPage autoSize" ' + (startIndex + limit >= totalRecordCount ? 'disabled' : '') + '><span class="material-icons arrow_forward" aria-hidden="true"></span></button>';
         }
 
         if (options.addLayoutButton) {
